@@ -6,7 +6,7 @@ also there are reset and play/pause buttons. set you session and break time and 
 after the session time will run out, the break will start. the timer will run endlessly unless you pause or reset.
 
 
-[Click here to chack the page LIVE](https://dor-plaut-home-page.netlify.app/)
+[Click here to chack the page LIVE](https://pomdoro-timer.netlify.app/)
 
 Build by Dor Plaut as part of FreeCodeCamp 'Front End Development Libraries' course 2022
 
