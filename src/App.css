@@ -1,0 +1,223 @@
+/* global styles */
+:root {
+  /* variablse */
+  --primaryColor: #bd2453;
+  --primaryColor2: #d03b68;
+  --primaryColor3: #ff709d;
+  --primaryColor4: #db7998;
+  --seconderyColor: #252525;
+  --seconderyColor2: #3f3f3f;
+  --primaryGradient: linear-gradient(
+    135deg,
+    var(--primaryColor4) 0%,
+    var(--primaryColor2) 100%
+  );
+  --seconderyGradient: linear-gradient(
+    335deg,
+    var(--seconderyColor) 0%,
+    var(--seconderyColor2) 100%
+  );
+  --textShadow: 2px 2px 0px var(--primaryColor3);
+  --transition: 0.3s linear;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* background */
+main {
+  text-shadow: var(--textShadow);
+  color: var(--seconderyColor);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  animation: FadeIn 1s linear forwards;
+  opacity: 0;
+}
+h1 {
+  font-size: 2.6rem;
+  margin-top: 0;
+}
+h2 {
+  font-size: 2.2rem;
+  margin-top: 0;
+}
+h3 {
+  font-size: 1.4rem;
+  margin-top: 0.8rem;
+}
+
+.container {
+  width: 60vw;
+  max-width: 25rem;
+  animation: FadeIn 1s linear forwards;
+  opacity: 0;
+  animation-delay: 2s;
+}
+.background {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+  background: var(--seconderyGradient);
+  transition: var(--transition);
+}
+.filler {
+  background: var(--primaryColor);
+  position: fixed;
+  width: 18rem;
+  height: 18rem;
+  transition: var(--transition);
+  animation: FadeIn 1s linear forwards;
+  opacity: 0;
+  animation-delay: 2s;
+}
+.backgroundIcon {
+  font-size: 35rem;
+  color: var(--primaryColor);
+  position: relative;
+  bottom: 2rem;
+  transition: var(--transition);
+  animation: FadeInNTwist 1s linear forwards;
+  opacity: 0;
+  animation-delay: 1s;
+}
+
+/* controls  */
+.controllers-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.time-controller {
+  background: var(--primaryGradient);
+  border-radius: 50%;
+  width: 8rem;
+  height: 8rem;
+  text-align: center;
+  transition: var(--transition);
+}
+.pulse {
+  animation: pulse 0.8s infinite;
+}
+.session-label {
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+  margin-bottom: -1rem;
+}
+/* timer */
+.timer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 2rem;
+}
+
+/* buttons */
+.dark-light {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+}
+.btn {
+  cursor: pointer;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  margin: 0rem 0.5rem 0rem 0.5rem;
+  border: 0;
+  background: var(--primaryColor3);
+  text-align: center;
+  transition: 0.1s;
+  transition: var(--transition);
+}
+.btn-icon {
+  color: var(--seconderyColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  transition: 1s linear;
+  transition: var(--transition);
+}
+.btn:hover {
+  background: var(--primaryColor4);
+  animation: rotate 0.8s;
+}
+.btn:active {
+  background: var(--primaryColor3);
+}
+/* footer */
+footer {
+  color: var(--primaryColor4);
+  text-shadow: 1px 1px 0px var(--primaryColor3);
+  position: fixed;
+  bottom: 10rem;
+  animation: FadeIn 1s linear forwards;
+  opacity: 0;
+  animation-delay: 3s;
+}
+footer a {
+  color: var(--primaryColor4);
+  text-decoration: none;
+  font-weight: bold;
+  transition: var(--transition);
+}
+footer a:hover {
+  color: var(--seconderyColor2);
+}
+.dark-light {
+  animation: FadeIn 1s linear forwards;
+  opacity: 0;
+  animation-delay: 3s;
+}
+
+/* animations */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0px 0px 0px 0px red;
+  }
+  50% {
+    box-shadow: 0px 0px 30px 0px red;
+  }
+  100% {
+    box-shadow: 0px 0px 0px 0px red;
+  }
+}
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+@keyframes FadeInNTwist {
+  0% {
+    opacity: 0;
+    transform: rotate(90deg);
+  }
+  100% {
+    opacity: 100%;
+    transform: rotate(0deg);
+  }
+}
