@@ -162,8 +162,8 @@ h3 {
 footer {
   color: var(--primaryColor4);
   text-shadow: 1px 1px 0px var(--primaryColor3);
-  position: fixed;
-  bottom: 10rem;
+  position: absolute;
+  bottom: 8rem;
   animation: FadeIn 1s linear forwards;
   opacity: 0;
   animation-delay: 3s;
