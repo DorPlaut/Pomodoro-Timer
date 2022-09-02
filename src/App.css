@@ -54,7 +54,7 @@ h3 {
 }
 
 .container {
-  width: 60vw;
+  width: 80vw;
   max-width: 25rem;
   animation: FadeIn 1s linear forwards;
   opacity: 0;
@@ -74,8 +74,8 @@ h3 {
 .filler {
   background: var(--primaryColor);
   position: fixed;
-  width: 18rem;
-  height: 18rem;
+  width: 16rem;
+  height: 16rem;
   transition: var(--transition);
   animation: FadeIn 1s linear forwards;
   opacity: 0;
@@ -107,7 +107,7 @@ h3 {
   transition: var(--transition);
 }
 .pulse {
-  animation: pulse 0.8s infinite;
+  animation: pulse 1s infinite;
 }
 .session-label {
   display: flex;
@@ -163,7 +163,7 @@ footer {
   color: var(--primaryColor4);
   text-shadow: 1px 1px 0px var(--primaryColor3);
   position: absolute;
-  bottom: 8rem;
+  bottom: 0rem;
   animation: FadeIn 1s linear forwards;
   opacity: 0;
   animation-delay: 3s;

@@ -181,9 +181,10 @@ function App() {
           <div className="filler"></div>
           <BsFillStopwatchFill className="backgroundIcon" />
         </div>
-        {/* pomdoro clock */}
+        {/* pomdoro clock  */}
         <div className="container">
           <h1>Pomodoro Timer</h1>
+
           <TimeControl
             sessionLength={sessionLength}
             setSessionLength={setSessionLength}

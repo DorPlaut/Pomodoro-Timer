@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "howler": "^2.2.3",
     "react": "^18.2.0",
     "react-countdown": "^2.3.2",
     "react-dom": "^18.2.0",

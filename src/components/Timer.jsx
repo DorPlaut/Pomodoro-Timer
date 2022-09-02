@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Countdown from 'react-countdown';
 import { BsFillPlayFill, BsPauseFill } from 'react-icons/bs';
 import { VscDebugRestart } from 'react-icons/vsc';
+import { Howl, Howler } from 'howler';
 
 function Timer({
   newSec,
@@ -16,13 +17,23 @@ function Timer({
   const [isPaused, setIsPaused] = useState(true);
   const [isAlert, setIsAlert] = useState(false);
 
+  const sound = new Howl({
+    src: ['/Media/tickingbuzzer-75859.mp3'],
+    html5: true,
+  });
+
   useEffect(() => {
     if (newMin == '00') {
       setIsAlert(true);
     } else {
       setIsAlert(false);
     }
-  }, [newMin]);
+  }, [newSec]);
+  useEffect(() => {
+    if (newMin == '00' && newSec == '28') {
+      sound.play();
+    }
+  }, [newSec]);
 
   return (
     <>
@@ -39,6 +50,8 @@ function Timer({
                 onClick={() => {
                   playPauseClick();
                   setIsPaused(!isPaused);
+                  Howler.stop();
+                  setIsAlert(false);
                 }}
               >
                 <div className="btn-icon">
@@ -51,6 +64,8 @@ function Timer({
                 onClick={() => {
                   resetClick();
                   setIsPaused(true);
+                  Howler.stop();
+                  setIsAlert(false);
                 }}
               >
                 <div className="btn-icon">
