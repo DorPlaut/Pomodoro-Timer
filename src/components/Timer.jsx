@@ -18,7 +18,9 @@ function Timer({
   const [isAlert, setIsAlert] = useState(false);
 
   const sound = new Howl({
-    src: ['/Media/tickingbuzzer-75859.mp3'],
+    src: [
+      'https://github.com/DorPlaut/Pomodoro-Timer/blob/main/Media/tickingbuzzer-75859.mp3?raw=true',
+    ],
     html5: true,
   });
 
